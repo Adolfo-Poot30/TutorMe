@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/sesion.css" />
+    <title>SIGN</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+
+
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+
+                    <form    class="register-form" method="POST" id="register-form">
+                        <h2>Regístrate</h2>
+
+                            
+                        </select>
+                        <input id="name" name="nombreCompleto" type="text" placeholder="Nombre completo *" required />
+                        <input id="user" name="nombre_usuario" type="text" placeholder="Nombre de usuario *" required />
+                        <input id="email" name="correo" type="email" placeholder="Correo electronico *" required />
+                        <input id="password" name="password" type="password" placeholder="Contraseña *" required />
+                            
+                        <button class="button_create"type="submit">CREAR</button>
+                    </form>
+
+                </div>
+                <div class="form-container sign-in-container">
+                    <form class="login-form">
+                        <h2>Iniciar sesión</h2>
+                        <input name="correo" class="inputLogin" type="text" placeholder="Nombre de usuario" required />
+                        <input name="password" class="inputLogin" type="password" placeholder="Contraseña" required />
+                        <a>
+                            <button class= "button_login" type="button">LOGIN</button>
+                        </a>
+                        
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>¡Bienvenido de nuevo!</h1>
+                            <p>Para mantenerse conectado con nosotros, inicie sesión</p>
+                            <button class="ghost" id="signIn">Iniciar Sesión</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hola, ¡Bienvenido!</h1>
+                            <p>Ingresa tus datos personales y comienza tu aventura con nosotros</p>
+                            <button class="ghost" id="signUp" href="">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/sesion.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/form.js"></script>
+
+</body>
+
+</html>
