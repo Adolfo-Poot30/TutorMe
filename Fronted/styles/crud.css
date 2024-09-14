@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+    font-family: Helvetica;
+}
+body{
+    background-color: #1C1F2E;    ;
+}
+
+
+.editar form{
+    display: flex;
+    flex-direction: column;
+}
+.editar form input{
+    width: 280px;
+    padding: 4px;
+    border-radius: 6px;
+}
+.editar form textarea{
+    width: 280px;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.panelControl{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+.windows{
+    background-color: #5C0FDA;   
+    height: 95vh;
+    padding: 40px;
+    color: white;
+    border-radius: 20px;
+}
+.panelControl{
+    padding: 20px;
+}
+.opcionesTable ul{
+    height: 80%;
+}
+.opcionesTable div{
+    height: 15%;
+    display: flex;
+    align-items: end;
+}
+.opcionesTable div a button{
+    width: 250px;
+    padding: 10px 30px 10px 30px;
+    background-color: #FF3459;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    border: 0px;
+    cursor: pointer;
+} 
+.opcionesTable ul{
+    padding: 0px 20px 0px 0px;
+}
+.opcionesTable ul li{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    padding: 12px 20px 12px 20px;
+    border-radius: 12px;
+
+}
+.opcionesTable ul li:hover{
+    background-color: #2d3247;
+}
+.opcionesTable img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.windows input{
+    background-color: #4c0fae;
+    border: 0px;
+    padding: 12px 20px 12px 20px;
+    border-radius: 20px;
+    color: white;
+}
+.windows button{
+    border: 1px solid white;
+    padding: 8px 20px 8px 20px;
+    background-color: #5C0FDA;
+    color: white;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
