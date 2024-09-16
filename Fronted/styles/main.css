@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #5C0FDA;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/fondoBgTutorMe.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: auto 100%;
+}
+.information{
+    font-family: Helvetica;
+    position: relative;
+    left: 10%;
+}
+.information h1{
+    color: white;
+    font-size: 96px;
+    font-weight: 900;
+}
+.information h4{
+    color: white;
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    margin-top: -15px;
+    margin-left: 8px;
+}
+.information div{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+.information button{
+    font-size: 28px;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 40px 14px 40px;
+    margin-top: 5px;
+    background-color: #5C0FDA;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.information a{
+    color: white;
+    font-weight: 100;
+    font-family: Helvetica;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+}
