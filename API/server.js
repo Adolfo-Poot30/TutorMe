@@ -87,18 +87,19 @@ app.post('/login', async (req, res) => {
 
         const user = results[0];
 
-        console.log('Hash from DB:', user.password); // Debugging line
-        console.log('Password provided:', password);
+        /*console.log('Hash from DB:', user.password); // Debugging line
+        console.log('Password provided:', password);*/
 
         // Comparar la contraseña proporcionada con la almacenada en la base de datos
         const match = await bcrypt.compare(password, user.password);
+        console.log('¿sesion iniciada?', match);
         if (!match) {
             return res.status(401).send('Contraseña incorrecta');
         }
 
         // Generar un token JWT
         const token = jwt.sign({ id: user.id_usuario, nombre_usuario: user.nombre_usuario }, 'your_jwt_secret', { expiresIn: '1h' });
-
+        //console.log(token);
         res.json({ token });
     });
 });
@@ -107,20 +108,21 @@ app.post('/login', async (req, res) => {
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
-    
+    //console.log('Token recibido:', token);
     if (token == null) return res.sendStatus(401);
     
     jwt.verify(token, 'your_jwt_secret', (err, user) => {
-        if (err) return res.sendStatus(403);
+        if (err) console.error('Error al verificar el token:', err); return res.sendStatus(403);
         req.user = user;
         next();
     });
 };
 
-// Ruta protegida
-app.get('/protected', authenticateToken, (req, res) => {
-    res.json({ message: 'Contenido protegido', user: req.user });
+// Ruta protegida, funcion para obtener datos del usuario
+app.get('/user-profile', authenticateToken, (req, res) => {
+    res.json({ nombre_completo: req.user.nombre_completo, nombre_usuario: req.user.nombre_usuario, correo: req.user.correo });
 });
+
 
 //Iniciar servidor
 app.listen(port, () => {
